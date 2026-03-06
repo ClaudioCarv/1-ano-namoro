@@ -185,13 +185,13 @@ if pagina == "Início":
     col1,col2,col3 = st.columns(3)
 
     with col1:
-        st.image(formatar_foto("fotinha1.jpeg"))
+        st.image(formatar_foto("fotinha1.jpeg", "rb"))
 
     with col2:
-        st.image(formatar_foto("fotinha2.jpeg"))
+        st.image(formatar_foto("fotinha2.jpeg", "rb"))
 
     with col3:
-        st.image(formatar_foto("fotinha3.jpeg"))
+        st.image(formatar_foto("fotinha3.jpeg", "rb"))
 
     st.write("")
 
@@ -209,12 +209,12 @@ elif pagina == "Memórias":
     col1,col2 = st.columns(2)
 
     with col1:
-        st.image(formatar_foto("fotinha1.jpeg"),caption="Nosso primeiro natal juntos")
-        st.image(formatar_foto("fotinha2.jpeg"),caption="Primeira vez comendo Sushi-Dog")
+        st.image(formatar_foto("fotinha1.jpeg", "rb"),caption="Nosso primeiro natal juntos")
+        st.image(formatar_foto("fotinha2.jpeg", "rb"),caption="Primeira vez comendo Sushi-Dog")
 
     with col2:
-        st.image(formatar_foto("fotinha3.jpeg"),caption="Minha foto favorita")
-        st.image(formatar_foto("fotinha4.jpeg"),caption="Piscininha ao seu lado")
+        st.image(formatar_foto("fotinha3.jpeg", "rb"),caption="Minha foto favorita")
+        st.image(formatar_foto("fotinha4.jpeg", "rb"),caption="Piscininha ao seu lado")
 
 
 # ---------------- HISTORIA ----------------
