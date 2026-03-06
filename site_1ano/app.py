@@ -244,7 +244,7 @@ elif pagina == "Nossa Música":
 
     st.title("🎵 Nossa Música")
 
-    st.video("https://www.youtube.com/watch?v=450p7goxZqg")
+    st.video("https://youtu.be/95sIqFXh6j0?si=SkQ_fYU-PCDP_qUP")
 
 
 # ---------------- QUIZ ----------------
