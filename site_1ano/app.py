@@ -3,8 +3,6 @@ from datetime import date
 from PIL import Image
 from pathlib import Path
 
-# ---------------- CONFIG ----------------
-
 st.set_page_config(
     page_title="Nosso 1 Ano ❤️",
     page_icon="❤️",
@@ -18,7 +16,6 @@ BASE_DIR = Path(__file__).parent
 def formatar_foto(nome):
 
     caminho = BASE_DIR / nome
-
     img = Image.open(caminho)
 
     largura, altura = img.size
@@ -34,6 +31,7 @@ def formatar_foto(nome):
 
     return img
 
+
 # ---------------- CSS ----------------
 
 st.markdown("""
@@ -42,10 +40,17 @@ st.markdown("""
 
 <style>
 
-html, body, [class*="css"]  {
+html, body, [class*="css"]{
 font-family: 'Poppins', sans-serif;
-color: black;
 }
+
+/* FORÇA TEXTO PRETO */
+
+h1,h2,h3,h4,h5,h6,p,span,div,label{
+color:black !important;
+}
+
+/* FUNDO */
 
 .stApp{
 background: linear-gradient(180deg,#fff0f5,#ffe4ec);
@@ -60,13 +65,12 @@ padding:60px 20px;
 
 .hero-title{
 font-size:60px;
-color:#ff4b6e;
+color:#ff4b6e !important;
 font-weight:600;
 }
 
 .hero-sub{
 font-size:22px;
-color:black;
 }
 
 /* CARD */
@@ -77,7 +81,6 @@ padding:30px;
 border-radius:18px;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:center;
-color:black;
 }
 
 /* SIDEBAR */
@@ -90,7 +93,7 @@ section[data-testid="stSidebar"] *{
 color:white !important;
 }
 
-/* BOTÕES */
+/* BOTÃO */
 
 div.stButton > button{
 background-color:#ff4b6e;
@@ -115,12 +118,11 @@ border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 font-size:18px;
 line-height:1.7;
-color:black;
 }
 
-/* RESPONSIVO CELULAR */
+/* RESPONSIVO */
 
-@media (max-width: 768px){
+@media (max-width:768px){
 
 .hero-title{
 font-size:40px;
@@ -175,6 +177,7 @@ to{transform:scale(1.1);}
 
 """, unsafe_allow_html=True)
 
+
 # ---------------- MENU ----------------
 
 pagina = st.sidebar.radio(
@@ -208,13 +211,13 @@ if pagina == "Início":
     col1,col2,col3 = st.columns(3)
 
     with col1:
-        st.image(formatar_foto("fotinha1.jpeg"), use_container_width=True)
+        st.image(formatar_foto("fotinha1.jpeg"),use_container_width=True)
 
     with col2:
-        st.image(formatar_foto("fotinha2.jpeg"), use_container_width=True)
+        st.image(formatar_foto("fotinha2.jpeg"),use_container_width=True)
 
     with col3:
-        st.image(formatar_foto("fotinha3.jpeg"), use_container_width=True)
+        st.image(formatar_foto("fotinha3.jpeg"),use_container_width=True)
 
     if st.button("Clique aqui para uma surpresa ❤️"):
         st.balloons()
@@ -229,12 +232,12 @@ elif pagina == "Memórias":
     col1,col2 = st.columns(2)
 
     with col1:
-        st.image(formatar_foto("fotinha1.jpeg"),caption="Nosso primeiro natal juntos", use_container_width=True)
-        st.image(formatar_foto("fotinha2.jpeg"),caption="Primeira vez comendo Sushi-Dog", use_container_width=True)
+        st.image(formatar_foto("fotinha1.jpeg"),caption="Nosso primeiro natal juntos",use_container_width=True)
+        st.image(formatar_foto("fotinha2.jpeg"),caption="Primeira vez comendo Sushi-Dog",use_container_width=True)
 
     with col2:
-        st.image(formatar_foto("fotinha3.jpeg"),caption="Minha foto favorita", use_container_width=True)
-        st.image(formatar_foto("fotinha4.jpeg"),caption="Piscininha ao seu lado", use_container_width=True)
+        st.image(formatar_foto("fotinha3.jpeg"),caption="Minha foto favorita",use_container_width=True)
+        st.image(formatar_foto("fotinha4.jpeg"),caption="Piscininha ao seu lado",use_container_width=True)
 
 # ---------------- HISTORIA ----------------
 
