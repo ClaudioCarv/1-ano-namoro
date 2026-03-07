@@ -83,6 +83,12 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:center;
 }
 
+button[kind="header"] svg {
+fill: white !important;
+color: white !important;
+}
+
+
 /* SIDEBAR */
 
 section[data-testid="stSidebar"]{
@@ -271,7 +277,7 @@ elif pagina == "Nossa Música":
 
     st.title("🎵 Nossa Música")
 
-    st.video("https://www.youtube.com/watch?v=450p7goxZqg")
+    st.video("https://youtu.be/95sIqFXh6j0?si=suXWL5krBtaIRNih")
 
 # ---------------- QUIZ ----------------
 
