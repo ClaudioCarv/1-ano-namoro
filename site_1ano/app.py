@@ -83,11 +83,11 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:center;
 }
 
-button[kind="header"] svg {
+
+[data-testid="stHeader"] button svg {
 fill: white !important;
 color: white !important;
 }
-
 
 /* SIDEBAR */
 
