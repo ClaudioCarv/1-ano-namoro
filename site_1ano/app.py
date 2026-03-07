@@ -3,7 +3,7 @@ from datetime import date
 from PIL import Image
 from pathlib import Path
 
-# ---------------- CONFIGURAÇÃO ----------------
+# ---------------- CONFIG ----------------
 
 st.set_page_config(
     page_title="Nosso 1 Ano ❤️",
@@ -13,7 +13,7 @@ st.set_page_config(
 
 BASE_DIR = Path(__file__).parent
 
-# ---------------- FUNÇÃO PARA FORMATAR FOTO ----------------
+# ---------------- FUNÇÃO FOTO ----------------
 
 def formatar_foto(nome):
 
@@ -37,12 +37,14 @@ def formatar_foto(nome):
 # ---------------- CSS ----------------
 
 st.markdown("""
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-font-family:'Poppins',sans-serif;
+html, body, [class*="css"]  {
+font-family: 'Poppins', sans-serif;
+color: black;
 }
 
 .stApp{
@@ -53,18 +55,18 @@ background: linear-gradient(180deg,#fff0f5,#ffe4ec);
 
 .hero{
 text-align:center;
-padding:60px;
+padding:60px 20px;
 }
 
 .hero-title{
-font-size:70px;
+font-size:60px;
 color:#ff4b6e;
 font-weight:600;
 }
 
 .hero-sub{
-font-size:24px;
-color:#555;
+font-size:22px;
+color:black;
 }
 
 /* CARD */
@@ -75,6 +77,7 @@ padding:30px;
 border-radius:18px;
 box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:center;
+color:black;
 }
 
 /* SIDEBAR */
@@ -87,7 +90,7 @@ section[data-testid="stSidebar"] *{
 color:white !important;
 }
 
-/* BOTÃO */
+/* BOTÕES */
 
 div.stButton > button{
 background-color:#ff4b6e;
@@ -96,6 +99,7 @@ border-radius:12px;
 padding:12px 25px;
 font-size:18px;
 border:none;
+width:100%;
 }
 
 div.stButton > button:hover{
@@ -111,6 +115,26 @@ border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 font-size:18px;
 line-height:1.7;
+color:black;
+}
+
+/* RESPONSIVO CELULAR */
+
+@media (max-width: 768px){
+
+.hero-title{
+font-size:40px;
+}
+
+.hero-sub{
+font-size:18px;
+}
+
+.carta{
+font-size:16px;
+padding:25px;
+}
+
 }
 
 /* EU TE AMO */
@@ -129,10 +153,11 @@ animation: fadeOut 3s forwards;
 }
 
 .amor-texto{
-font-size:120px;
+font-size:90px;
 font-weight:700;
 color:#ff0000;
 animation:pulse 1s infinite alternate;
+text-align:center;
 }
 
 @keyframes fadeOut{
@@ -147,6 +172,7 @@ to{transform:scale(1.1);}
 }
 
 </style>
+
 """, unsafe_allow_html=True)
 
 # ---------------- MENU ----------------
@@ -156,7 +182,7 @@ pagina = st.sidebar.radio(
 ["Início","Memórias","Nossa História","Nossa Música","Quiz","Carta"]
 )
 
-# ---------------- INÍCIO ----------------
+# ---------------- INICIO ----------------
 
 if pagina == "Início":
 
@@ -182,19 +208,19 @@ if pagina == "Início":
     col1,col2,col3 = st.columns(3)
 
     with col1:
-        st.image(formatar_foto("fotinha1.jpeg"))
+        st.image(formatar_foto("fotinha1.jpeg"), use_container_width=True)
 
     with col2:
-        st.image(formatar_foto("fotinha2.jpeg"))
+        st.image(formatar_foto("fotinha2.jpeg"), use_container_width=True)
 
     with col3:
-        st.image(formatar_foto("fotinha3.jpeg"))
+        st.image(formatar_foto("fotinha3.jpeg"), use_container_width=True)
 
     if st.button("Clique aqui para uma surpresa ❤️"):
         st.balloons()
         st.success("Eu te amo muito ❤️")
 
-# ---------------- MEMÓRIAS ----------------
+# ---------------- MEMORIAS ----------------
 
 elif pagina == "Memórias":
 
@@ -203,14 +229,14 @@ elif pagina == "Memórias":
     col1,col2 = st.columns(2)
 
     with col1:
-        st.image(formatar_foto("fotinha1.jpeg"),caption="Nosso primeiro natal juntos")
-        st.image(formatar_foto("fotinha2.jpeg"),caption="Primeira vez comendo Sushi-Dog")
+        st.image(formatar_foto("fotinha1.jpeg"),caption="Nosso primeiro natal juntos", use_container_width=True)
+        st.image(formatar_foto("fotinha2.jpeg"),caption="Primeira vez comendo Sushi-Dog", use_container_width=True)
 
     with col2:
-        st.image(formatar_foto("fotinha3.jpeg"),caption="Minha foto favorita")
-        st.image(formatar_foto("fotinha4.jpeg"),caption="Piscininha ao seu lado")
+        st.image(formatar_foto("fotinha3.jpeg"),caption="Minha foto favorita", use_container_width=True)
+        st.image(formatar_foto("fotinha4.jpeg"),caption="Piscininha ao seu lado", use_container_width=True)
 
-# ---------------- HISTÓRIA ----------------
+# ---------------- HISTORIA ----------------
 
 elif pagina == "Nossa História":
 
@@ -236,7 +262,7 @@ Um ano cheio de memórias incríveis.
 
 """)
 
-# ---------------- MÚSICA ----------------
+# ---------------- MUSICA ----------------
 
 elif pagina == "Nossa Música":
 
