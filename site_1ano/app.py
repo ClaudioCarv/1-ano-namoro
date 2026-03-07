@@ -205,7 +205,7 @@ if pagina == "Início":
     </div>
     """, unsafe_allow_html=True)
 
-    inicio = date(2025,3,9)
+    inicio = date(2025,3,8)
     hoje = date.today()
 
     dias = (hoje - inicio).days
