@@ -83,11 +83,14 @@ box-shadow:0 10px 25px rgba(0,0,0,0.1);
 text-align:center;
 }
 
+/* SETA MENU STREAMLIT */
 
-[data-testid="stHeader"] button svg {
+[data-testid="collapsedControl"] button svg {
 fill: white !important;
+stroke: white !important;
 color: white !important;
 }
+
 
 /* SIDEBAR */
 
