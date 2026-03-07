@@ -258,19 +258,19 @@ elif pagina == "Nossa História":
 
 **💬 Primeiro contato**
 
-O dia em que começamos a conversar e eu percebi o quanto você era especial.
+O dia em que começamos a conversar, dia 4 de janeiro e eu percebi o quanto você era especial.
 
 **☕ Primeiro encontro**
 
-Um dos dias mais especiais da minha vida.
+Um dos dias mais especiais da minha vida, naquele shopping, foi um dia inesquecível.
 
 **❤️ Pedido de namoro**
 
-O momento em que nossa história começou oficialmente.
+O momento em que nossa história começou oficialmente, tudo com uma aliança e uma vontade de crescer ao seu lado.
 
 **🎉 Nosso primeiro ano**
 
-Um ano cheio de memórias incríveis.
+Um ano cheio de memórias incríveis, que esse ano tenha memorias tão incríveis quanto o ano passado.
 
 """)
 
